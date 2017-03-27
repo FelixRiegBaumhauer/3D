@@ -83,6 +83,8 @@ struct matrix * generate_sphere(double cx, double cy, double cz,
   ans = new_matrix(4,4);
 
   double x, y, z, t1, t2;
+
+  
   
   for (t1 = step; t1 <= 1.00001; t1 += step) {
     for (t2 = step; t2 <= 1.00001; t2 += step) {
