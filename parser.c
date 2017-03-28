@@ -247,7 +247,7 @@ void parse_file ( char * filename,
 	     xvals[0], yvals[0], zvals[0],
 	     xvals[1], yvals[1], zvals[1]) */
       add_torus(edges, xvals[0], yvals[0], zvals[0],
-		 xvals[1], yvals[1], .05);      
+		 xvals[1], yvals[1], .01);      
     }//end torus
     
   }
