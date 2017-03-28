@@ -57,7 +57,7 @@ void add_sphere( struct matrix * edges,
   steps = 2 * (1.00001 / (step * step));
   //we know that steps is 1/step
   int i;
-  for(i = 0; i < steps; i+=2){
+  for(i = 0; i < steps-1; i+=2){
     add_edge(edges, hold->m[0][i], hold->m[1][i], hold->m[2][i],
 	      hold->m[0][i+1], hold->m[1][i+1], hold->m[2][i+1]);
   }
@@ -92,7 +92,7 @@ struct matrix * generate_sphere(double cx, double cy, double cz,
       x = r * cos( M_PI * t1) + cx;
       y = r * sin( M_PI * t1 ) * cos( 2 * M_PI * t2) + cy;
       z = r * sin( M_PI * t1 ) * sin( 2 * M_PI * t2) + cz;
-      
+
       add_edge(ans, x, y, z, x+2, y+2, z+2);
     }
   }
@@ -124,7 +124,7 @@ void add_torus( struct matrix * edges,
   steps = 2 * (1.00001 / (step * step));
   //we know that steps is 1/step
   int i;
-  for(i = 0; i < steps; i+=2){
+  for(i = 0; i < steps-1; i+=2){
     add_edge(edges, hold->m[0][i], hold->m[1][i], hold->m[2][i],
 	      hold->m[0][i+1], hold->m[1][i+1], hold->m[2][i+1]);
   }
